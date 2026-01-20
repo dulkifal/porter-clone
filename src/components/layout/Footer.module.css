@@ -1,0 +1,59 @@
+.footer {
+  background-color: #0b0e14; /* Porter uses a very dark blue/black */
+  color: #8d97a6;
+  padding: 64px 0 24px;
+  font-size: 14px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  margin-bottom: 48px;
+}
+
+.columnTitle {
+  color: white;
+  font-weight: 600;
+  margin-bottom: 24px;
+  font-size: 16px;
+}
+
+.linkList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.link {
+  color: inherit;
+  transition: color 0.2s;
+}
+
+.link:hover {
+  color: white;
+}
+
+.bottom {
+  border-top: 1px solid #1f2329;
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.socials {
+  display: flex;
+  gap: 16px;
+}
+
+.socialIcon {
+  width: 24px;
+  height: 24px;
+  background-color: #1f2329;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}

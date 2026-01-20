@@ -1,0 +1,171 @@
+.heroSection {
+  background-image: url('/bg_image.webp');
+  background-size: cover;
+  background-position: center;
+  /* Adjust height as needed, likely defined by content + padding in a real simplified clone */
+  min-height: 500px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 60px; /* Account for sticky header if needed */
+}
+
+/* Optional overlay if text needs contrast */
+.heroSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3); /* Slight dark overlay */
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding-bottom: 120px; /* Space for the floating widget overlap */
+}
+
+.heroTitle {
+  font-size: 48px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.heroHashtag {
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.floatingWidgetContainer {
+  position: absolute;
+  bottom: -80px; /* Overlap the section below */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 960px;
+  z-index: 10;
+  padding: 0 16px;
+}
+
+.floatingWidget {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.citySelector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.cityIcon {
+  color: var(--primary-color);
+}
+
+.servicesGrid {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.serviceOption {
+  flex: 1;
+  background: #f5f7fa;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  min-width: 120px;
+}
+
+.serviceOption:hover {
+  background: #eef2f6;
+}
+
+.serviceIcon {
+  font-size: 32px;
+}
+
+.serviceLabel {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+.estimateBtn {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 8px;
+  padding: 24px;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-align: left;
+}
+
+.estimateBtn:hover {
+  background-color: var(--primary-hover);
+}
+
+.btnText {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.btnSubtext {
+  font-size: 12px;
+  opacity: 0.9;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .heroTitle { font-size: 32px; }
+  .heroHashtag { font-size: 40px; }
+  
+  .floatingWidgetContainer {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    margin-top: -40px;
+    padding: 0 16px 40px;
+  }
+  
+  .servicesGrid {
+    flex-wrap: wrap;
+  }
+  
+  .serviceOption {
+    min-width: 45%;
+  }
+  
+  .estimateBtn {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+}
